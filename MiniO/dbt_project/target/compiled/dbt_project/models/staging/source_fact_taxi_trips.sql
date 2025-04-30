@@ -1,0 +1,1 @@
+select * from "MiniO_server"."dbo"."fact_taxi_trips"

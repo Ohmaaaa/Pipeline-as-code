@@ -1,0 +1,1907 @@
+[0m23:37:04.883961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F1DCF9960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F209797E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F2097B940>]}
+
+
+============================== 23:37:04.887480 | 14a91415-7326-4168-aa99-755c7c9b1c3c ==============================
+[0m23:37:04.887480 [info ] [MainThread]: Running with dbt=1.8.9
+[0m23:37:04.889483 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\naell\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\naell\\OneDrive - univ-lyon2.fr\\Documents\\Epsi\\MiniO\\dbt_project\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:37:05.264221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '14a91415-7326-4168-aa99-755c7c9b1c3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F2155D660>]}
+[0m23:37:05.314170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '14a91415-7326-4168-aa99-755c7c9b1c3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F1F04BD60>]}
+[0m23:37:05.315170 [info ] [MainThread]: Registered adapter: sqlserver=1.8.7
+[0m23:37:05.660793 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m23:37:05.662795 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:37:05.662795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '14a91415-7326-4168-aa99-755c7c9b1c3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F21503130>]}
+[0m23:37:08.300293 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_project.example
+[0m23:37:08.312811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '14a91415-7326-4168-aa99-755c7c9b1c3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F222CFFD0>]}
+[0m23:37:08.453719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '14a91415-7326-4168-aa99-755c7c9b1c3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F222B5DB0>]}
+[0m23:37:08.455227 [info ] [MainThread]: Found 5 models, 2 sources, 504 macros
+[0m23:37:08.456234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '14a91415-7326-4168-aa99-755c7c9b1c3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F21606FE0>]}
+[0m23:37:08.459234 [info ] [MainThread]: 
+[0m23:37:08.459234 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m23:37:08.466613 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_MiniO_server'
+[0m23:37:08.480488 [debug] [ThreadPool]: dbt-sqlserver
+[0m23:37:08.481489 [debug] [ThreadPool]: Using sqlserver connection "list_MiniO_server"
+[0m23:37:08.482489 [debug] [ThreadPool]: On list_MiniO_server: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_MiniO_server"} */
+USE [MiniO_server];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m23:37:08.482489 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:37:08.483491 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:37:08.957966 [debug] [ThreadPool]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:37:08.962628 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:37:08.963628 [debug] [ThreadPool]: On list_MiniO_server: Close
+[0m23:37:08.965627 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_MiniO_server_dbo'
+[0m23:37:08.972739 [debug] [ThreadPool]: dbt-sqlserver
+[0m23:37:08.973736 [debug] [ThreadPool]: Using sqlserver connection "list_MiniO_server_dbo"
+[0m23:37:08.973736 [debug] [ThreadPool]: On list_MiniO_server_dbo: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_MiniO_server_dbo"} */
+USE [MiniO_server];
+    with base as (
+      select
+        DB_NAME() as [database],
+        t.name as [name],
+        SCHEMA_NAME(t.schema_id) as [schema],
+        'table' as table_type
+      from sys.tables as t with (nolock)
+      union all
+      select
+        DB_NAME() as [database],
+        v.name as [name],
+        SCHEMA_NAME(v.schema_id) as [schema],
+        'view' as table_type
+      from sys.views as v with (nolock)
+    )
+    select * from base
+    where [schema] like 'dbo'
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m23:37:08.973736 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:37:08.975244 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:37:08.975244 [debug] [ThreadPool]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:37:09.003983 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:37:09.006505 [debug] [ThreadPool]: On list_MiniO_server_dbo: ROLLBACK
+[0m23:37:09.007503 [debug] [ThreadPool]: On list_MiniO_server_dbo: Close
+[0m23:37:09.008503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '14a91415-7326-4168-aa99-755c7c9b1c3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F2228A770>]}
+[0m23:37:09.008503 [debug] [MainThread]: On master: COMMIT
+[0m23:37:09.009505 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:37:09.011507 [info ] [MainThread]: 
+[0m23:37:09.020475 [debug] [Thread-1 (]: Began running node model.dbt_project.source_dim_weather
+[0m23:37:09.021475 [info ] [Thread-1 (]: 1 of 5 START sql view model dbo.source_dim_weather ............................. [RUN]
+[0m23:37:09.023480 [debug] [Thread-1 (]: Acquiring new sqlserver connection 'model.dbt_project.source_dim_weather'
+[0m23:37:09.024476 [debug] [Thread-1 (]: Began compiling node model.dbt_project.source_dim_weather
+[0m23:37:09.085317 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.source_dim_weather"
+[0m23:37:09.087163 [debug] [Thread-1 (]: Began executing node model.dbt_project.source_dim_weather
+[0m23:37:09.119272 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.source_dim_weather"
+[0m23:37:09.121275 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:37:09.122281 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."source_dim_weather__dbt_tmp" as select * from "MiniO_server"."dbo"."dim_weather";
+    ')
+
+
+[0m23:37:09.123275 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:37:09.123275 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:37:09.124275 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:37:09.133620 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:37:09.140642 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:37:09.141641 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_dim_weather__dbt_tmp', 'source_dim_weather'
+[0m23:37:09.285289 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:37:09.301748 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: COMMIT
+[0m23:37:09.308262 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."source_dim_weather__dbt_backup"
+[0m23:37:09.315769 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:37:09.316777 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:37:09.316777 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'source_dim_weather__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:37:09.335385 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:37:09.337297 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:37:09.337297 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."source_dim_weather__dbt_backup";');
+
+[0m23:37:09.340302 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:37:09.344306 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: ROLLBACK
+[0m23:37:09.344306 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: Close
+[0m23:37:09.346658 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '14a91415-7326-4168-aa99-755c7c9b1c3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F223E95D0>]}
+[0m23:37:09.347659 [info ] [Thread-1 (]: 1 of 5 OK created sql view model dbo.source_dim_weather ........................ [[32mOK[0m in 0.32s]
+[0m23:37:09.348659 [debug] [Thread-1 (]: Finished running node model.dbt_project.source_dim_weather
+[0m23:37:09.349659 [debug] [Thread-1 (]: Began running node model.dbt_project.source_fact_taxi_trips
+[0m23:37:09.350662 [info ] [Thread-1 (]: 2 of 5 START sql view model dbo.source_fact_taxi_trips ......................... [RUN]
+[0m23:37:09.351660 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.source_dim_weather, now model.dbt_project.source_fact_taxi_trips)
+[0m23:37:09.352663 [debug] [Thread-1 (]: Began compiling node model.dbt_project.source_fact_taxi_trips
+[0m23:37:09.355660 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.source_fact_taxi_trips"
+[0m23:37:09.357174 [debug] [Thread-1 (]: Began executing node model.dbt_project.source_fact_taxi_trips
+[0m23:37:09.363175 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.source_fact_taxi_trips"
+[0m23:37:09.365173 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:37:09.365173 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."source_fact_taxi_trips__dbt_tmp" as select * from "MiniO_server"."dbo"."fact_taxi_trips";
+    ')
+
+
+[0m23:37:09.366446 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:37:09.367445 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:37:09.368444 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:37:09.371443 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:37:09.375444 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:37:09.376477 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_fact_taxi_trips__dbt_tmp', 'source_fact_taxi_trips'
+[0m23:37:09.379482 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:37:09.381487 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: COMMIT
+[0m23:37:09.385485 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."source_fact_taxi_trips__dbt_backup"
+[0m23:37:09.386571 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:37:09.387570 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:37:09.387570 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'source_fact_taxi_trips__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:37:09.397095 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:37:09.399096 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:37:09.400094 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."source_fact_taxi_trips__dbt_backup";');
+
+[0m23:37:09.401094 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:37:09.403092 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: ROLLBACK
+[0m23:37:09.403092 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: Close
+[0m23:37:09.404096 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '14a91415-7326-4168-aa99-755c7c9b1c3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F223EA3B0>]}
+[0m23:37:09.404096 [info ] [Thread-1 (]: 2 of 5 OK created sql view model dbo.source_fact_taxi_trips .................... [[32mOK[0m in 0.05s]
+[0m23:37:09.406612 [debug] [Thread-1 (]: Finished running node model.dbt_project.source_fact_taxi_trips
+[0m23:37:09.406612 [debug] [Thread-1 (]: Began running node model.dbt_project.trip_enriched
+[0m23:37:09.407623 [info ] [Thread-1 (]: 3 of 5 START sql view model dbo.trip_enriched .................................. [RUN]
+[0m23:37:09.408621 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.source_fact_taxi_trips, now model.dbt_project.trip_enriched)
+[0m23:37:09.408621 [debug] [Thread-1 (]: Began compiling node model.dbt_project.trip_enriched
+[0m23:37:09.413617 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.trip_enriched"
+[0m23:37:09.414621 [debug] [Thread-1 (]: Began executing node model.dbt_project.trip_enriched
+[0m23:37:09.421298 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.trip_enriched"
+[0m23:37:09.423300 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:37:09.424301 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."trip_enriched__dbt_tmp" as with trips as (
+    select * from "MiniO_server"."dbo"."fact_taxi_trips"
+),
+weather as (
+    select * from "MiniO_server"."dbo"."dim_weather"
+),
+trip_enriched as (
+    select 
+        t.*,
+        w.weather_category,
+        w.temperature,
+        w.vent_vitesse,
+        t.tip_amount / nullif(t.fare_amount, 0) * 100 as tip_percentage,
+        t.payment_type
+    from trips t
+    left join weather w 
+        on cast(t.tpep_pickup_datetime as date) = cast(w.timestamp as date)
+        and datepart(hour, t.tpep_pickup_datetime) = datepart(hour, w.timestamp)
+)
+
+select * from trip_enriched;
+    ')
+
+
+[0m23:37:09.425300 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:37:09.425300 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:37:09.426394 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:37:09.432395 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:37:09.434396 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: ROLLBACK
+[0m23:37:09.434396 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: Close
+[0m23:37:09.435393 [error] [Thread-1 (]: [31mUnhandled error while executing target\run\dbt_project\models\marts\trip_enriched.sql[0m
+('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]La colonne 'tip_percentage' a été spécifiée plusieurs fois pour 'trip_enriched'. (8156) (SQLMoreResults)")
+[0m23:37:09.466416 [debug] [Thread-1 (]: Traceback (most recent call last):
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\task\base.py", line 368, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\task\base.py", line 314, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\task\base.py", line 415, in run
+    return self.execute(compiled_node, manifest)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\task\run.py", line 298, in execute
+    result = MacroGenerator(
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\clients\jinja.py", line 84, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 81, in macro
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\clients\jinja.py", line 84, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt_common\record.py", line 507, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\adapters\base\impl.py", line 438, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\adapters\fabric\fabric_connection_manager.py", line 568, in execute
+    while cursor.nextset():
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]La colonne 'tip_percentage' a été spécifiée plusieurs fois pour 'trip_enriched'. (8156) (SQLMoreResults)")
+
+[0m23:37:09.467416 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '14a91415-7326-4168-aa99-755c7c9b1c3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F2281F370>]}
+[0m23:37:09.468416 [error] [Thread-1 (]: 3 of 5 ERROR creating sql view model dbo.trip_enriched ......................... [[31mERROR[0m in 0.06s]
+[0m23:37:09.469414 [debug] [Thread-1 (]: Finished running node model.dbt_project.trip_enriched
+[0m23:37:09.470454 [debug] [Thread-1 (]: Began running node model.dbt_project.high_value_customers
+[0m23:37:09.470963 [info ] [Thread-1 (]: 4 of 5 SKIP relation dbo.high_value_customers .................................. [[33mSKIP[0m]
+[0m23:37:09.471971 [debug] [Thread-1 (]: Finished running node model.dbt_project.high_value_customers
+[0m23:37:09.472971 [debug] [Thread-1 (]: Began running node model.dbt_project.trip_summary_per_hour
+[0m23:37:09.473971 [info ] [Thread-1 (]: 5 of 5 SKIP relation dbo.trip_summary_per_hour ................................. [[33mSKIP[0m]
+[0m23:37:09.473971 [debug] [Thread-1 (]: Finished running node model.dbt_project.trip_summary_per_hour
+[0m23:37:09.476000 [debug] [MainThread]: On master: COMMIT
+[0m23:37:09.476000 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:37:09.477006 [debug] [MainThread]: Connection 'list_MiniO_server' was properly closed.
+[0m23:37:09.478008 [debug] [MainThread]: Connection 'list_MiniO_server_dbo' was properly closed.
+[0m23:37:09.478008 [debug] [MainThread]: Connection 'model.dbt_project.trip_enriched' was properly closed.
+[0m23:37:09.479006 [info ] [MainThread]: 
+[0m23:37:09.480007 [info ] [MainThread]: Finished running 5 view models in 0 hours 0 minutes and 1.02 seconds (1.02s).
+[0m23:37:09.482006 [debug] [MainThread]: Command end result
+[0m23:37:09.511593 [info ] [MainThread]: 
+[0m23:37:09.512592 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m23:37:09.512592 [info ] [MainThread]: 
+[0m23:37:09.513592 [error] [MainThread]:   ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]La colonne 'tip_percentage' a été spécifiée plusieurs fois pour 'trip_enriched'. (8156) (SQLMoreResults)")
+[0m23:37:09.514592 [info ] [MainThread]: 
+[0m23:37:09.514592 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=2 TOTAL=5
+[0m23:37:09.516682 [debug] [MainThread]: Command `dbt run` failed at 23:37:09.516682 after 4.73 seconds
+[0m23:37:09.517683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F1DCF9960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F2229C9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F2229DDE0>]}
+[0m23:37:09.518681 [debug] [MainThread]: Flushing usage events
+[0m23:38:15.939163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAB9F9960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAE6797E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAE67B940>]}
+
+
+============================== 23:38:15.942166 | f3faf16a-bc2f-4d3c-b737-042b1014780e ==============================
+[0m23:38:15.942166 [info ] [MainThread]: Running with dbt=1.8.9
+[0m23:38:15.943166 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\naell\\.dbt', 'log_path': 'C:\\Users\\naell\\OneDrive - univ-lyon2.fr\\Documents\\Epsi\\MiniO\\dbt_project\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:38:16.323581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f3faf16a-bc2f-4d3c-b737-042b1014780e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAF179660>]}
+[0m23:38:16.376070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f3faf16a-bc2f-4d3c-b737-042b1014780e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBACB4BD60>]}
+[0m23:38:16.377074 [info ] [MainThread]: Registered adapter: sqlserver=1.8.7
+[0m23:38:16.685255 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m23:38:16.873914 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:38:16.875419 [debug] [MainThread]: Partial parsing: updated file: dbt_project://models\marts\trip_enriched.sql
+[0m23:38:17.132184 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_project.example
+[0m23:38:17.149223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f3faf16a-bc2f-4d3c-b737-042b1014780e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAFCE5E10>]}
+[0m23:38:17.258056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f3faf16a-bc2f-4d3c-b737-042b1014780e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAFCB93F0>]}
+[0m23:38:17.259057 [info ] [MainThread]: Found 5 models, 2 sources, 504 macros
+[0m23:38:17.259057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f3faf16a-bc2f-4d3c-b737-042b1014780e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAFCB93C0>]}
+[0m23:38:17.261056 [info ] [MainThread]: 
+[0m23:38:17.262054 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m23:38:17.268572 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_MiniO_server'
+[0m23:38:17.281680 [debug] [ThreadPool]: dbt-sqlserver
+[0m23:38:17.282467 [debug] [ThreadPool]: Using sqlserver connection "list_MiniO_server"
+[0m23:38:17.282979 [debug] [ThreadPool]: On list_MiniO_server: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_MiniO_server"} */
+USE [MiniO_server];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m23:38:17.283489 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:38:17.283489 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:38:17.336583 [debug] [ThreadPool]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:38:17.340591 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:38:17.342591 [debug] [ThreadPool]: On list_MiniO_server: Close
+[0m23:38:17.344588 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_MiniO_server_dbo'
+[0m23:38:17.350105 [debug] [ThreadPool]: dbt-sqlserver
+[0m23:38:17.351105 [debug] [ThreadPool]: Using sqlserver connection "list_MiniO_server_dbo"
+[0m23:38:17.352107 [debug] [ThreadPool]: On list_MiniO_server_dbo: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_MiniO_server_dbo"} */
+USE [MiniO_server];
+    with base as (
+      select
+        DB_NAME() as [database],
+        t.name as [name],
+        SCHEMA_NAME(t.schema_id) as [schema],
+        'table' as table_type
+      from sys.tables as t with (nolock)
+      union all
+      select
+        DB_NAME() as [database],
+        v.name as [name],
+        SCHEMA_NAME(v.schema_id) as [schema],
+        'view' as table_type
+      from sys.views as v with (nolock)
+    )
+    select * from base
+    where [schema] like 'dbo'
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m23:38:17.353107 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:38:17.353107 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:38:17.354110 [debug] [ThreadPool]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:38:17.378167 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:38:17.379171 [debug] [ThreadPool]: On list_MiniO_server_dbo: ROLLBACK
+[0m23:38:17.380171 [debug] [ThreadPool]: On list_MiniO_server_dbo: Close
+[0m23:38:17.382172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f3faf16a-bc2f-4d3c-b737-042b1014780e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAF7C9360>]}
+[0m23:38:17.382172 [debug] [MainThread]: On master: COMMIT
+[0m23:38:17.383173 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:38:17.383173 [info ] [MainThread]: 
+[0m23:38:17.386684 [debug] [Thread-1 (]: Began running node model.dbt_project.source_dim_weather
+[0m23:38:17.387683 [info ] [Thread-1 (]: 1 of 5 START sql view model dbo.source_dim_weather ............................. [RUN]
+[0m23:38:17.388681 [debug] [Thread-1 (]: Acquiring new sqlserver connection 'model.dbt_project.source_dim_weather'
+[0m23:38:17.389683 [debug] [Thread-1 (]: Began compiling node model.dbt_project.source_dim_weather
+[0m23:38:17.397857 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.source_dim_weather"
+[0m23:38:17.399856 [debug] [Thread-1 (]: Began executing node model.dbt_project.source_dim_weather
+[0m23:38:17.433975 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.source_dim_weather"
+[0m23:38:17.436489 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:38:17.436489 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."source_dim_weather__dbt_tmp" as select * from "MiniO_server"."dbo"."dim_weather";
+    ')
+
+
+[0m23:38:17.437488 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:38:17.438488 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:38:17.438488 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:38:17.441489 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.448214 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:38:17.449215 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_dim_weather', 'source_dim_weather__dbt_backup'
+[0m23:38:17.577662 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.580667 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:38:17.582225 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_dim_weather__dbt_tmp', 'source_dim_weather'
+[0m23:38:17.584243 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.598896 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: COMMIT
+[0m23:38:17.604891 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."source_dim_weather__dbt_backup"
+[0m23:38:17.610729 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:38:17.611234 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:38:17.612239 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'source_dim_weather__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:38:17.623746 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.626258 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:38:17.626258 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."source_dim_weather__dbt_backup";');
+
+[0m23:38:17.628261 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.630264 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: ROLLBACK
+[0m23:38:17.631262 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: Close
+[0m23:38:17.633257 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3faf16a-bc2f-4d3c-b737-042b1014780e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBA9EE8760>]}
+[0m23:38:17.633257 [info ] [Thread-1 (]: 1 of 5 OK created sql view model dbo.source_dim_weather ........................ [[32mOK[0m in 0.24s]
+[0m23:38:17.634258 [debug] [Thread-1 (]: Finished running node model.dbt_project.source_dim_weather
+[0m23:38:17.635771 [debug] [Thread-1 (]: Began running node model.dbt_project.source_fact_taxi_trips
+[0m23:38:17.635771 [info ] [Thread-1 (]: 2 of 5 START sql view model dbo.source_fact_taxi_trips ......................... [RUN]
+[0m23:38:17.636780 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.source_dim_weather, now model.dbt_project.source_fact_taxi_trips)
+[0m23:38:17.637789 [debug] [Thread-1 (]: Began compiling node model.dbt_project.source_fact_taxi_trips
+[0m23:38:17.640788 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.source_fact_taxi_trips"
+[0m23:38:17.641787 [debug] [Thread-1 (]: Began executing node model.dbt_project.source_fact_taxi_trips
+[0m23:38:17.647299 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.source_fact_taxi_trips"
+[0m23:38:17.648298 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:38:17.649297 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."source_fact_taxi_trips__dbt_tmp" as select * from "MiniO_server"."dbo"."fact_taxi_trips";
+    ')
+
+
+[0m23:38:17.649297 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:38:17.650301 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:38:17.651298 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:38:17.654299 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.658770 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:38:17.658770 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_fact_taxi_trips', 'source_fact_taxi_trips__dbt_backup'
+[0m23:38:17.661771 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.665391 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:38:17.666409 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_fact_taxi_trips__dbt_tmp', 'source_fact_taxi_trips'
+[0m23:38:17.668928 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.670926 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: COMMIT
+[0m23:38:17.673928 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."source_fact_taxi_trips__dbt_backup"
+[0m23:38:17.675434 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:38:17.676440 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:38:17.677440 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'source_fact_taxi_trips__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:38:17.686964 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.688958 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:38:17.688958 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."source_fact_taxi_trips__dbt_backup";');
+
+[0m23:38:17.691961 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.692960 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: ROLLBACK
+[0m23:38:17.693960 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: Close
+[0m23:38:17.693960 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3faf16a-bc2f-4d3c-b737-042b1014780e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAF1CD960>]}
+[0m23:38:17.695463 [info ] [Thread-1 (]: 2 of 5 OK created sql view model dbo.source_fact_taxi_trips .................... [[32mOK[0m in 0.06s]
+[0m23:38:17.696470 [debug] [Thread-1 (]: Finished running node model.dbt_project.source_fact_taxi_trips
+[0m23:38:17.697471 [debug] [Thread-1 (]: Began running node model.dbt_project.trip_enriched
+[0m23:38:17.697471 [info ] [Thread-1 (]: 3 of 5 START sql view model dbo.trip_enriched .................................. [RUN]
+[0m23:38:17.698477 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.source_fact_taxi_trips, now model.dbt_project.trip_enriched)
+[0m23:38:17.699477 [debug] [Thread-1 (]: Began compiling node model.dbt_project.trip_enriched
+[0m23:38:17.702477 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.trip_enriched"
+[0m23:38:17.704477 [debug] [Thread-1 (]: Began executing node model.dbt_project.trip_enriched
+[0m23:38:17.710990 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.trip_enriched"
+[0m23:38:17.712992 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:38:17.713991 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."trip_enriched__dbt_tmp" as with trips as (
+    select * from "MiniO_server"."dbo"."fact_taxi_trips"
+),
+weather as (
+    select * from "MiniO_server"."dbo"."dim_weather"
+),
+trip_enriched as (
+    select 
+    t.tpep_pickup_datetime,
+    t.passenger_count,
+    t.trip_distance,
+    t.total_amount,
+    t.tip_amount,
+    t.fare_amount,
+    t.payment_type,
+    w.weather_category,
+    w.temperature,
+    w.vent_vitesse,
+    t.tip_amount / nullif(t.fare_amount, 0) * 100 as tip_percentage
+
+    from trips t
+    left join weather w 
+        on cast(t.tpep_pickup_datetime as date) = cast(w.timestamp as date)
+        and datepart(hour, t.tpep_pickup_datetime) = datepart(hour, w.timestamp)
+)
+
+select * from trip_enriched;
+    ')
+
+
+[0m23:38:17.713991 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:38:17.713991 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:38:17.715499 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:38:17.720514 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.725513 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:38:17.726019 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.trip_enriched__dbt_tmp', 'trip_enriched'
+[0m23:38:17.730027 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.732026 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: COMMIT
+[0m23:38:17.735538 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."trip_enriched__dbt_backup"
+[0m23:38:17.737546 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:38:17.737546 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:38:17.738544 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'trip_enriched__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:38:17.748055 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.750054 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:38:17.751054 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."trip_enriched__dbt_backup";');
+
+[0m23:38:17.752055 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.754054 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: ROLLBACK
+[0m23:38:17.754054 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: Close
+[0m23:38:17.754054 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3faf16a-bc2f-4d3c-b737-042b1014780e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBB01DF6A0>]}
+[0m23:38:17.755557 [info ] [Thread-1 (]: 3 of 5 OK created sql view model dbo.trip_enriched ............................. [[32mOK[0m in 0.06s]
+[0m23:38:17.756561 [debug] [Thread-1 (]: Finished running node model.dbt_project.trip_enriched
+[0m23:38:17.756561 [debug] [Thread-1 (]: Began running node model.dbt_project.high_value_customers
+[0m23:38:17.758075 [info ] [Thread-1 (]: 4 of 5 START sql view model dbo.high_value_customers ........................... [RUN]
+[0m23:38:17.758075 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.trip_enriched, now model.dbt_project.high_value_customers)
+[0m23:38:17.759080 [debug] [Thread-1 (]: Began compiling node model.dbt_project.high_value_customers
+[0m23:38:17.762079 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.high_value_customers"
+[0m23:38:17.763081 [debug] [Thread-1 (]: Began executing node model.dbt_project.high_value_customers
+[0m23:38:17.768598 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.high_value_customers"
+[0m23:38:17.770596 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:38:17.771525 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."high_value_customers__dbt_tmp" as with base as (
+    select * from "MiniO_server"."dbo"."trip_enriched"
+),
+agg as (
+    select 
+        passenger_count as client_id,
+        count(*) as nb_trajets,
+        sum(total_amount) as total_depense,
+        avg(tip_percentage) as avg_tip
+    from base
+    group by passenger_count
+),
+filtre as (
+    select *
+    from agg
+    where nb_trajets > 10
+      and total_depense > 300
+      and avg_tip > 15
+)
+
+select * from filtre;
+    ')
+
+
+[0m23:38:17.772036 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:38:17.772546 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:38:17.773053 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:38:17.775563 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.779956 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:38:17.780952 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.high_value_customers__dbt_tmp', 'high_value_customers'
+[0m23:38:17.782951 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.783950 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: COMMIT
+[0m23:38:17.787471 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."high_value_customers__dbt_backup"
+[0m23:38:17.788477 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:38:17.789477 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:38:17.790481 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'high_value_customers__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:38:17.798677 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.800199 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:38:17.801204 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."high_value_customers__dbt_backup";');
+
+[0m23:38:17.802207 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.804203 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: ROLLBACK
+[0m23:38:17.804203 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: Close
+[0m23:38:17.804203 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3faf16a-bc2f-4d3c-b737-042b1014780e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAFD0F0D0>]}
+[0m23:38:17.805710 [info ] [Thread-1 (]: 4 of 5 OK created sql view model dbo.high_value_customers ...................... [[32mOK[0m in 0.05s]
+[0m23:38:17.806716 [debug] [Thread-1 (]: Finished running node model.dbt_project.high_value_customers
+[0m23:38:17.807716 [debug] [Thread-1 (]: Began running node model.dbt_project.trip_summary_per_hour
+[0m23:38:17.807716 [info ] [Thread-1 (]: 5 of 5 START sql view model dbo.trip_summary_per_hour .......................... [RUN]
+[0m23:38:17.808716 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.high_value_customers, now model.dbt_project.trip_summary_per_hour)
+[0m23:38:17.809715 [debug] [Thread-1 (]: Began compiling node model.dbt_project.trip_summary_per_hour
+[0m23:38:17.812716 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.trip_summary_per_hour"
+[0m23:38:17.815220 [debug] [Thread-1 (]: Began executing node model.dbt_project.trip_summary_per_hour
+[0m23:38:17.819226 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.trip_summary_per_hour"
+[0m23:38:17.821669 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_summary_per_hour"
+[0m23:38:17.821669 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_summary_per_hour"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."trip_summary_per_hour__dbt_tmp" as with base as (
+    select * from "MiniO_server"."dbo"."trip_enriched"
+),
+agg as (
+    select 
+        datepart(hour, tpep_pickup_datetime) as pickup_hour,
+        weather_category,
+        count(*) as nb_trajets,
+        avg(trip_duration_minutes) as duree_moyenne,
+        avg(tip_percentage) as pourboire_moyen
+    from base
+    group by datepart(hour, tpep_pickup_datetime), weather_category
+)
+
+select * from agg;
+    ')
+
+
+[0m23:38:17.822673 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:38:17.822673 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:38:17.823674 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:38:17.825673 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:38:17.827529 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: ROLLBACK
+[0m23:38:17.828039 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: Close
+[0m23:38:17.828039 [error] [Thread-1 (]: [31mUnhandled error while executing target\run\dbt_project\models\marts\trip_summary_per_hour.sql[0m
+('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nom de colonne non valide\xa0: 'trip_duration_minutes'. (207) (SQLMoreResults)")
+[0m23:38:17.831045 [debug] [Thread-1 (]: Traceback (most recent call last):
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\task\base.py", line 368, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\task\base.py", line 314, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\task\base.py", line 415, in run
+    return self.execute(compiled_node, manifest)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\task\run.py", line 298, in execute
+    result = MacroGenerator(
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\clients\jinja.py", line 84, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 81, in macro
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\clients\jinja.py", line 84, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt_common\record.py", line 507, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\adapters\base\impl.py", line 438, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+  File "c:\Users\naell\OneDrive - univ-lyon2.fr\Documents\Epsi\MiniO\.venv\lib\site-packages\dbt\adapters\fabric\fabric_connection_manager.py", line 568, in execute
+    while cursor.nextset():
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nom de colonne non valide\xa0: 'trip_duration_minutes'. (207) (SQLMoreResults)")
+
+[0m23:38:17.832044 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f3faf16a-bc2f-4d3c-b737-042b1014780e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBB01CEFB0>]}
+[0m23:38:17.833045 [error] [Thread-1 (]: 5 of 5 ERROR creating sql view model dbo.trip_summary_per_hour ................. [[31mERROR[0m in 0.02s]
+[0m23:38:17.834045 [debug] [Thread-1 (]: Finished running node model.dbt_project.trip_summary_per_hour
+[0m23:38:17.836558 [debug] [MainThread]: On master: COMMIT
+[0m23:38:17.837564 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:38:17.837564 [debug] [MainThread]: Connection 'list_MiniO_server' was properly closed.
+[0m23:38:17.837564 [debug] [MainThread]: Connection 'list_MiniO_server_dbo' was properly closed.
+[0m23:38:17.838563 [debug] [MainThread]: Connection 'model.dbt_project.trip_summary_per_hour' was properly closed.
+[0m23:38:17.838563 [info ] [MainThread]: 
+[0m23:38:17.839563 [info ] [MainThread]: Finished running 5 view models in 0 hours 0 minutes and 0.58 seconds (0.58s).
+[0m23:38:17.841567 [debug] [MainThread]: Command end result
+[0m23:38:17.872148 [info ] [MainThread]: 
+[0m23:38:17.874151 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m23:38:17.874151 [info ] [MainThread]: 
+[0m23:38:17.875657 [error] [MainThread]:   ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nom de colonne non valide\xa0: 'trip_duration_minutes'. (207) (SQLMoreResults)")
+[0m23:38:17.876663 [info ] [MainThread]: 
+[0m23:38:17.876663 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=1 SKIP=0 TOTAL=5
+[0m23:38:17.877662 [debug] [MainThread]: Command `dbt run` failed at 23:38:17.877662 after 2.03 seconds
+[0m23:38:17.878661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAB9F9960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBADA3F580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAF9460B0>]}
+[0m23:38:17.878661 [debug] [MainThread]: Flushing usage events
+[0m23:39:14.188368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF0BF9930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF3879810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF387A3E0>]}
+
+
+============================== 23:39:14.192364 | 3b4fa68b-07e5-4569-a56e-4bc9aef7d353 ==============================
+[0m23:39:14.192364 [info ] [MainThread]: Running with dbt=1.8.9
+[0m23:39:14.193368 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\naell\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\naell\\OneDrive - univ-lyon2.fr\\Documents\\Epsi\\MiniO\\dbt_project\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:39:14.560988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3b4fa68b-07e5-4569-a56e-4bc9aef7d353', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF0EA70D0>]}
+[0m23:39:14.607057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3b4fa68b-07e5-4569-a56e-4bc9aef7d353', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF1D4BD30>]}
+[0m23:39:14.608057 [info ] [MainThread]: Registered adapter: sqlserver=1.8.7
+[0m23:39:14.891204 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m23:39:15.072316 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:39:15.073313 [debug] [MainThread]: Partial parsing: updated file: dbt_project://models\marts\trip_enriched.sql
+[0m23:39:15.314176 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_project.example
+[0m23:39:15.329367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3b4fa68b-07e5-4569-a56e-4bc9aef7d353', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF4EE5DE0>]}
+[0m23:39:15.418017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3b4fa68b-07e5-4569-a56e-4bc9aef7d353', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF4EBCE80>]}
+[0m23:39:15.419016 [info ] [MainThread]: Found 5 models, 2 sources, 504 macros
+[0m23:39:15.420014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3b4fa68b-07e5-4569-a56e-4bc9aef7d353', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF4EBCDF0>]}
+[0m23:39:15.422016 [info ] [MainThread]: 
+[0m23:39:15.423013 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m23:39:15.429532 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_MiniO_server'
+[0m23:39:15.444192 [debug] [ThreadPool]: dbt-sqlserver
+[0m23:39:15.444192 [debug] [ThreadPool]: Using sqlserver connection "list_MiniO_server"
+[0m23:39:15.445698 [debug] [ThreadPool]: On list_MiniO_server: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_MiniO_server"} */
+USE [MiniO_server];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m23:39:15.446747 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:39:15.446747 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:39:15.528629 [debug] [ThreadPool]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:39:15.532627 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:39:15.533627 [debug] [ThreadPool]: On list_MiniO_server: Close
+[0m23:39:15.535627 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_MiniO_server_dbo'
+[0m23:39:15.541160 [debug] [ThreadPool]: dbt-sqlserver
+[0m23:39:15.542163 [debug] [ThreadPool]: Using sqlserver connection "list_MiniO_server_dbo"
+[0m23:39:15.543165 [debug] [ThreadPool]: On list_MiniO_server_dbo: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_MiniO_server_dbo"} */
+USE [MiniO_server];
+    with base as (
+      select
+        DB_NAME() as [database],
+        t.name as [name],
+        SCHEMA_NAME(t.schema_id) as [schema],
+        'table' as table_type
+      from sys.tables as t with (nolock)
+      union all
+      select
+        DB_NAME() as [database],
+        v.name as [name],
+        SCHEMA_NAME(v.schema_id) as [schema],
+        'view' as table_type
+      from sys.views as v with (nolock)
+    )
+    select * from base
+    where [schema] like 'dbo'
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m23:39:15.543165 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:39:15.544164 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:39:15.544164 [debug] [ThreadPool]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:39:15.570472 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:39:15.571473 [debug] [ThreadPool]: On list_MiniO_server_dbo: ROLLBACK
+[0m23:39:15.572473 [debug] [ThreadPool]: On list_MiniO_server_dbo: Close
+[0m23:39:15.573472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3b4fa68b-07e5-4569-a56e-4bc9aef7d353', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF13090F0>]}
+[0m23:39:15.574471 [debug] [MainThread]: On master: COMMIT
+[0m23:39:15.574471 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:39:15.575470 [info ] [MainThread]: 
+[0m23:39:15.578981 [debug] [Thread-1 (]: Began running node model.dbt_project.source_dim_weather
+[0m23:39:15.578981 [info ] [Thread-1 (]: 1 of 5 START sql view model dbo.source_dim_weather ............................. [RUN]
+[0m23:39:15.579986 [debug] [Thread-1 (]: Acquiring new sqlserver connection 'model.dbt_project.source_dim_weather'
+[0m23:39:15.580985 [debug] [Thread-1 (]: Began compiling node model.dbt_project.source_dim_weather
+[0m23:39:15.588523 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.source_dim_weather"
+[0m23:39:15.590520 [debug] [Thread-1 (]: Began executing node model.dbt_project.source_dim_weather
+[0m23:39:15.623846 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.source_dim_weather"
+[0m23:39:15.625350 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:39:15.626356 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."source_dim_weather__dbt_tmp" as select * from "MiniO_server"."dbo"."dim_weather";
+    ')
+
+
+[0m23:39:15.627360 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:39:15.628355 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:39:15.628355 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:39:15.630735 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.638787 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:39:15.639788 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_dim_weather', 'source_dim_weather__dbt_backup'
+[0m23:39:15.772727 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.776926 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:39:15.776926 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_dim_weather__dbt_tmp', 'source_dim_weather'
+[0m23:39:15.779922 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.794444 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: COMMIT
+[0m23:39:15.799626 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."source_dim_weather__dbt_backup"
+[0m23:39:15.807142 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:39:15.808148 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:39:15.809149 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'source_dim_weather__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:39:15.824670 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.826910 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:39:15.827921 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."source_dim_weather__dbt_backup";');
+
+[0m23:39:15.829916 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.832919 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: ROLLBACK
+[0m23:39:15.832919 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: Close
+[0m23:39:15.833916 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3b4fa68b-07e5-4569-a56e-4bc9aef7d353', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF0130460>]}
+[0m23:39:15.835421 [info ] [Thread-1 (]: 1 of 5 OK created sql view model dbo.source_dim_weather ........................ [[32mOK[0m in 0.25s]
+[0m23:39:15.837430 [debug] [Thread-1 (]: Finished running node model.dbt_project.source_dim_weather
+[0m23:39:15.837430 [debug] [Thread-1 (]: Began running node model.dbt_project.source_fact_taxi_trips
+[0m23:39:15.838430 [info ] [Thread-1 (]: 2 of 5 START sql view model dbo.source_fact_taxi_trips ......................... [RUN]
+[0m23:39:15.839426 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.source_dim_weather, now model.dbt_project.source_fact_taxi_trips)
+[0m23:39:15.840192 [debug] [Thread-1 (]: Began compiling node model.dbt_project.source_fact_taxi_trips
+[0m23:39:15.842737 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.source_fact_taxi_trips"
+[0m23:39:15.843770 [debug] [Thread-1 (]: Began executing node model.dbt_project.source_fact_taxi_trips
+[0m23:39:15.850280 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.source_fact_taxi_trips"
+[0m23:39:15.851965 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:39:15.852475 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."source_fact_taxi_trips__dbt_tmp" as select * from "MiniO_server"."dbo"."fact_taxi_trips";
+    ')
+
+
+[0m23:39:15.852475 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:39:15.853018 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:39:15.854022 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:39:15.857536 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.860540 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:39:15.861539 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_fact_taxi_trips', 'source_fact_taxi_trips__dbt_backup'
+[0m23:39:15.866055 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.870065 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:39:15.871067 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_fact_taxi_trips__dbt_tmp', 'source_fact_taxi_trips'
+[0m23:39:15.874065 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.876576 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: COMMIT
+[0m23:39:15.878580 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."source_fact_taxi_trips__dbt_backup"
+[0m23:39:15.879580 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:39:15.880580 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:39:15.880580 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'source_fact_taxi_trips__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:39:15.889603 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.890603 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:39:15.891601 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."source_fact_taxi_trips__dbt_backup";');
+
+[0m23:39:15.893603 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.895603 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: ROLLBACK
+[0m23:39:15.896108 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: Close
+[0m23:39:15.897114 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3b4fa68b-07e5-4569-a56e-4bc9aef7d353', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF4EBD300>]}
+[0m23:39:15.897114 [info ] [Thread-1 (]: 2 of 5 OK created sql view model dbo.source_fact_taxi_trips .................... [[32mOK[0m in 0.06s]
+[0m23:39:15.898120 [debug] [Thread-1 (]: Finished running node model.dbt_project.source_fact_taxi_trips
+[0m23:39:15.899125 [debug] [Thread-1 (]: Began running node model.dbt_project.trip_enriched
+[0m23:39:15.900122 [info ] [Thread-1 (]: 3 of 5 START sql view model dbo.trip_enriched .................................. [RUN]
+[0m23:39:15.900122 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.source_fact_taxi_trips, now model.dbt_project.trip_enriched)
+[0m23:39:15.901118 [debug] [Thread-1 (]: Began compiling node model.dbt_project.trip_enriched
+[0m23:39:15.904119 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.trip_enriched"
+[0m23:39:15.905623 [debug] [Thread-1 (]: Began executing node model.dbt_project.trip_enriched
+[0m23:39:15.908900 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.trip_enriched"
+[0m23:39:15.910904 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:39:15.911904 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."trip_enriched__dbt_tmp" as with trips as (
+    select * from "MiniO_server"."dbo"."fact_taxi_trips"
+),
+weather as (
+    select * from "MiniO_server"."dbo"."dim_weather"
+),
+trip_enriched as (
+    select 
+    t.tpep_pickup_datetime,
+    t.tpep_dropoff_datetime,
+    t.passenger_count,
+    t.trip_distance,
+    t.total_amount,
+    t.tip_amount,
+    t.fare_amount,
+    t.payment_type,
+    datediff(minute, t.tpep_pickup_datetime, t.tpep_dropoff_datetime) as trip_duration_minutes,
+    w.weather_category,
+    w.temperature,
+    w.vent_vitesse,
+    t.tip_amount / nullif(t.fare_amount, 0) * 100 as tip_percentage
+
+
+    from trips t
+    left join weather w 
+        on cast(t.tpep_pickup_datetime as date) = cast(w.timestamp as date)
+        and datepart(hour, t.tpep_pickup_datetime) = datepart(hour, w.timestamp)
+)
+
+select * from trip_enriched;
+    ')
+
+
+[0m23:39:15.912904 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:39:15.912904 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:39:15.913905 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:39:15.917418 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.922418 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:39:15.922418 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.trip_enriched', 'trip_enriched__dbt_backup'
+[0m23:39:15.925418 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.929480 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:39:15.930482 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.trip_enriched__dbt_tmp', 'trip_enriched'
+[0m23:39:15.933484 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.935481 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: COMMIT
+[0m23:39:15.938799 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."trip_enriched__dbt_backup"
+[0m23:39:15.939796 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:39:15.940279 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:39:15.940782 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'trip_enriched__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:39:15.949327 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.951325 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:39:15.951325 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."trip_enriched__dbt_backup";');
+
+[0m23:39:15.954326 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.955325 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: ROLLBACK
+[0m23:39:15.956375 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: Close
+[0m23:39:15.956375 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3b4fa68b-07e5-4569-a56e-4bc9aef7d353', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF53BF6A0>]}
+[0m23:39:15.957375 [info ] [Thread-1 (]: 3 of 5 OK created sql view model dbo.trip_enriched ............................. [[32mOK[0m in 0.06s]
+[0m23:39:15.958374 [debug] [Thread-1 (]: Finished running node model.dbt_project.trip_enriched
+[0m23:39:15.959377 [debug] [Thread-1 (]: Began running node model.dbt_project.high_value_customers
+[0m23:39:15.960376 [info ] [Thread-1 (]: 4 of 5 START sql view model dbo.high_value_customers ........................... [RUN]
+[0m23:39:15.960376 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.trip_enriched, now model.dbt_project.high_value_customers)
+[0m23:39:15.961376 [debug] [Thread-1 (]: Began compiling node model.dbt_project.high_value_customers
+[0m23:39:15.964159 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.high_value_customers"
+[0m23:39:15.965667 [debug] [Thread-1 (]: Began executing node model.dbt_project.high_value_customers
+[0m23:39:15.969680 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.high_value_customers"
+[0m23:39:15.971681 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:39:15.971681 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."high_value_customers__dbt_tmp" as with base as (
+    select * from "MiniO_server"."dbo"."trip_enriched"
+),
+agg as (
+    select 
+        passenger_count as client_id,
+        count(*) as nb_trajets,
+        sum(total_amount) as total_depense,
+        avg(tip_percentage) as avg_tip
+    from base
+    group by passenger_count
+),
+filtre as (
+    select *
+    from agg
+    where nb_trajets > 10
+      and total_depense > 300
+      and avg_tip > 15
+)
+
+select * from filtre;
+    ')
+
+
+[0m23:39:15.972680 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:39:15.973679 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:39:15.973679 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:39:15.977194 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.980192 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:39:15.981193 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.high_value_customers', 'high_value_customers__dbt_backup'
+[0m23:39:15.984390 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.987900 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:39:15.988899 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.high_value_customers__dbt_tmp', 'high_value_customers'
+[0m23:39:15.990897 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:15.993901 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: COMMIT
+[0m23:39:15.996409 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."high_value_customers__dbt_backup"
+[0m23:39:15.997412 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:39:15.998411 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:39:15.999413 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'high_value_customers__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:39:16.008361 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:16.010365 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:39:16.011362 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."high_value_customers__dbt_backup";');
+
+[0m23:39:16.013362 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:16.014360 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: ROLLBACK
+[0m23:39:16.015363 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: Close
+[0m23:39:16.015363 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3b4fa68b-07e5-4569-a56e-4bc9aef7d353', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF53E5B70>]}
+[0m23:39:16.016847 [info ] [Thread-1 (]: 4 of 5 OK created sql view model dbo.high_value_customers ...................... [[32mOK[0m in 0.05s]
+[0m23:39:16.017520 [debug] [Thread-1 (]: Finished running node model.dbt_project.high_value_customers
+[0m23:39:16.018025 [debug] [Thread-1 (]: Began running node model.dbt_project.trip_summary_per_hour
+[0m23:39:16.018548 [info ] [Thread-1 (]: 5 of 5 START sql view model dbo.trip_summary_per_hour .......................... [RUN]
+[0m23:39:16.019055 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.high_value_customers, now model.dbt_project.trip_summary_per_hour)
+[0m23:39:16.019055 [debug] [Thread-1 (]: Began compiling node model.dbt_project.trip_summary_per_hour
+[0m23:39:16.022059 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.trip_summary_per_hour"
+[0m23:39:16.023059 [debug] [Thread-1 (]: Began executing node model.dbt_project.trip_summary_per_hour
+[0m23:39:16.027572 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.trip_summary_per_hour"
+[0m23:39:16.028571 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_summary_per_hour"
+[0m23:39:16.029572 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_summary_per_hour"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."trip_summary_per_hour__dbt_tmp" as with base as (
+    select * from "MiniO_server"."dbo"."trip_enriched"
+),
+agg as (
+    select 
+        datepart(hour, tpep_pickup_datetime) as pickup_hour,
+        weather_category,
+        count(*) as nb_trajets,
+        avg(trip_duration_minutes) as duree_moyenne,
+        avg(tip_percentage) as pourboire_moyen
+    from base
+    group by datepart(hour, tpep_pickup_datetime), weather_category
+)
+
+select * from agg;
+    ')
+
+
+[0m23:39:16.029572 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:39:16.030571 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:39:16.030571 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:39:16.033572 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:16.038086 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_summary_per_hour"
+[0m23:39:16.039088 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_summary_per_hour"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.trip_summary_per_hour__dbt_tmp', 'trip_summary_per_hour'
+[0m23:39:16.041083 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:16.043083 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: COMMIT
+[0m23:39:16.045587 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."trip_summary_per_hour__dbt_backup"
+[0m23:39:16.046592 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:39:16.047591 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_summary_per_hour"
+[0m23:39:16.048596 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_summary_per_hour"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'trip_summary_per_hour__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:39:16.056851 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:16.058850 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_summary_per_hour"
+[0m23:39:16.059855 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_summary_per_hour"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."trip_summary_per_hour__dbt_backup";');
+
+[0m23:39:16.061851 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:39:16.062852 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: ROLLBACK
+[0m23:39:16.063851 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: Close
+[0m23:39:16.063851 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3b4fa68b-07e5-4569-a56e-4bc9aef7d353', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF0130460>]}
+[0m23:39:16.063851 [info ] [Thread-1 (]: 5 of 5 OK created sql view model dbo.trip_summary_per_hour ..................... [[32mOK[0m in 0.04s]
+[0m23:39:16.065357 [debug] [Thread-1 (]: Finished running node model.dbt_project.trip_summary_per_hour
+[0m23:39:16.067363 [debug] [MainThread]: On master: COMMIT
+[0m23:39:16.067363 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:39:16.068368 [debug] [MainThread]: Connection 'list_MiniO_server' was properly closed.
+[0m23:39:16.068368 [debug] [MainThread]: Connection 'list_MiniO_server_dbo' was properly closed.
+[0m23:39:16.068368 [debug] [MainThread]: Connection 'model.dbt_project.trip_summary_per_hour' was properly closed.
+[0m23:39:16.069368 [info ] [MainThread]: 
+[0m23:39:16.069368 [info ] [MainThread]: Finished running 5 view models in 0 hours 0 minutes and 0.65 seconds (0.65s).
+[0m23:39:16.071371 [debug] [MainThread]: Command end result
+[0m23:39:16.101678 [info ] [MainThread]: 
+[0m23:39:16.102189 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:39:16.103194 [info ] [MainThread]: 
+[0m23:39:16.104195 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m23:39:16.104195 [debug] [MainThread]: Command `dbt run` succeeded at 23:39:16.104195 after 2.00 seconds
+[0m23:39:16.105700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF0BF9930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF2C3B580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014DF4E6F2B0>]}
+[0m23:39:16.105700 [debug] [MainThread]: Flushing usage events
+[0m23:12:53.998924 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A37F99F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A6469420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A646BEB0>]}
+
+
+============================== 23:12:54.014006 | f9a4ad0e-1798-48f8-8cbc-f5ac12ed0271 ==============================
+[0m23:12:54.014006 [info ] [MainThread]: Running with dbt=1.8.9
+[0m23:12:54.015199 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\naell\\OneDrive - univ-lyon2.fr\\Documents\\Epsi\\MiniO\\dbt_project\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\naell\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m23:12:59.988721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f9a4ad0e-1798-48f8-8cbc-f5ac12ed0271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A48FBF70>]}
+[0m23:13:00.118696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f9a4ad0e-1798-48f8-8cbc-f5ac12ed0271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A6469750>]}
+[0m23:13:00.121700 [info ] [MainThread]: Registered adapter: sqlserver=1.8.7
+[0m23:13:00.717456 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m23:13:02.652749 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:13:02.654254 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:13:02.662267 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_project.example
+[0m23:13:02.694009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f9a4ad0e-1798-48f8-8cbc-f5ac12ed0271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A77BC130>]}
+[0m23:13:03.156168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f9a4ad0e-1798-48f8-8cbc-f5ac12ed0271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A7741330>]}
+[0m23:13:03.157169 [info ] [MainThread]: Found 5 models, 2 sources, 504 macros
+[0m23:13:03.158168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f9a4ad0e-1798-48f8-8cbc-f5ac12ed0271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A75946A0>]}
+[0m23:13:03.161169 [info ] [MainThread]: 
+[0m23:13:03.163168 [debug] [MainThread]: Acquiring new sqlserver connection 'master'
+[0m23:13:03.174347 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_MiniO_server'
+[0m23:13:03.189256 [debug] [ThreadPool]: dbt-sqlserver
+[0m23:13:03.190257 [debug] [ThreadPool]: Using sqlserver connection "list_MiniO_server"
+[0m23:13:03.191256 [debug] [ThreadPool]: On list_MiniO_server: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_MiniO_server"} */
+USE [MiniO_server];
+    select  name as [schema]
+    from sys.schemas with (nolock) 
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m23:13:03.191256 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:13:03.192255 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:13:03.287363 [debug] [ThreadPool]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:13:03.290363 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:13:03.292363 [debug] [ThreadPool]: On list_MiniO_server: Close
+[0m23:13:03.294365 [debug] [ThreadPool]: Acquiring new sqlserver connection 'list_MiniO_server_dbo'
+[0m23:13:03.300881 [debug] [ThreadPool]: dbt-sqlserver
+[0m23:13:03.300881 [debug] [ThreadPool]: Using sqlserver connection "list_MiniO_server_dbo"
+[0m23:13:03.301882 [debug] [ThreadPool]: On list_MiniO_server_dbo: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_MiniO_server_dbo"} */
+USE [MiniO_server];
+    with base as (
+      select
+        DB_NAME() as [database],
+        t.name as [name],
+        SCHEMA_NAME(t.schema_id) as [schema],
+        'table' as table_type
+      from sys.tables as t with (nolock)
+      union all
+      select
+        DB_NAME() as [database],
+        v.name as [name],
+        SCHEMA_NAME(v.schema_id) as [schema],
+        'view' as table_type
+      from sys.views as v with (nolock)
+    )
+    select * from base
+    where [schema] like 'dbo'
+    
+    OPTION (LABEL = 'dbt-sqlserver');
+
+  
+[0m23:13:03.301882 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:13:03.302882 [debug] [ThreadPool]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:13:03.302882 [debug] [ThreadPool]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:13:03.324446 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:13:03.326453 [debug] [ThreadPool]: On list_MiniO_server_dbo: ROLLBACK
+[0m23:13:03.327454 [debug] [ThreadPool]: On list_MiniO_server_dbo: Close
+[0m23:13:03.329453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f9a4ad0e-1798-48f8-8cbc-f5ac12ed0271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A7797F40>]}
+[0m23:13:03.330455 [debug] [MainThread]: On master: COMMIT
+[0m23:13:03.332454 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:13:03.333455 [info ] [MainThread]: 
+[0m23:13:03.338251 [debug] [Thread-1 (]: Began running node model.dbt_project.source_dim_weather
+[0m23:13:03.339254 [info ] [Thread-1 (]: 1 of 5 START sql view model dbo.source_dim_weather ............................. [RUN]
+[0m23:13:03.340256 [debug] [Thread-1 (]: Acquiring new sqlserver connection 'model.dbt_project.source_dim_weather'
+[0m23:13:03.341251 [debug] [Thread-1 (]: Began compiling node model.dbt_project.source_dim_weather
+[0m23:13:03.350774 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.source_dim_weather"
+[0m23:13:03.352773 [debug] [Thread-1 (]: Began executing node model.dbt_project.source_dim_weather
+[0m23:13:03.392595 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.source_dim_weather"
+[0m23:13:03.395113 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:13:03.396113 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."source_dim_weather__dbt_tmp" as select * from "MiniO_server"."dbo"."dim_weather";
+    ')
+
+
+[0m23:13:03.396113 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:13:03.397121 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:13:03.400120 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:13:03.405147 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.413147 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:13:03.413147 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_dim_weather', 'source_dim_weather__dbt_backup'
+[0m23:13:03.588194 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.591199 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:13:03.592199 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_dim_weather__dbt_tmp', 'source_dim_weather'
+[0m23:13:03.594708 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.614236 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: COMMIT
+[0m23:13:03.622749 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."source_dim_weather__dbt_backup"
+[0m23:13:03.631272 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:13:03.633272 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:13:03.633272 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'source_dim_weather__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:13:03.647499 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.649502 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_dim_weather"
+[0m23:13:03.650501 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_dim_weather"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."source_dim_weather__dbt_backup";');
+
+[0m23:13:03.652501 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.656015 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: ROLLBACK
+[0m23:13:03.657023 [debug] [Thread-1 (]: On model.dbt_project.source_dim_weather: Close
+[0m23:13:03.659023 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f9a4ad0e-1798-48f8-8cbc-f5ac12ed0271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A1AED7E0>]}
+[0m23:13:03.661022 [info ] [Thread-1 (]: 1 of 5 OK created sql view model dbo.source_dim_weather ........................ [[32mOK[0m in 0.32s]
+[0m23:13:03.662023 [debug] [Thread-1 (]: Finished running node model.dbt_project.source_dim_weather
+[0m23:13:03.663021 [debug] [Thread-1 (]: Began running node model.dbt_project.source_fact_taxi_trips
+[0m23:13:03.663021 [info ] [Thread-1 (]: 2 of 5 START sql view model dbo.source_fact_taxi_trips ......................... [RUN]
+[0m23:13:03.664087 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.source_dim_weather, now model.dbt_project.source_fact_taxi_trips)
+[0m23:13:03.664087 [debug] [Thread-1 (]: Began compiling node model.dbt_project.source_fact_taxi_trips
+[0m23:13:03.668089 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.source_fact_taxi_trips"
+[0m23:13:03.669091 [debug] [Thread-1 (]: Began executing node model.dbt_project.source_fact_taxi_trips
+[0m23:13:03.675121 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.source_fact_taxi_trips"
+[0m23:13:03.678123 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:13:03.679122 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."source_fact_taxi_trips__dbt_tmp" as select * from "MiniO_server"."dbo"."fact_taxi_trips";
+    ')
+
+
+[0m23:13:03.679122 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:03.680125 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:13:03.681121 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:13:03.684123 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.687639 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:13:03.688640 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_fact_taxi_trips', 'source_fact_taxi_trips__dbt_backup'
+[0m23:13:03.691638 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.697161 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:13:03.698159 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.source_fact_taxi_trips__dbt_tmp', 'source_fact_taxi_trips'
+[0m23:13:03.701158 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.703660 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: COMMIT
+[0m23:13:03.708200 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."source_fact_taxi_trips__dbt_backup"
+[0m23:13:03.709199 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:13:03.710203 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:13:03.710203 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'source_fact_taxi_trips__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:13:03.728235 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.730235 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.source_fact_taxi_trips"
+[0m23:13:03.730235 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.source_fact_taxi_trips"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."source_fact_taxi_trips__dbt_backup";');
+
+[0m23:13:03.733237 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.734743 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: ROLLBACK
+[0m23:13:03.735749 [debug] [Thread-1 (]: On model.dbt_project.source_fact_taxi_trips: Close
+[0m23:13:03.735749 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f9a4ad0e-1798-48f8-8cbc-f5ac12ed0271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A75C9A20>]}
+[0m23:13:03.738290 [info ] [Thread-1 (]: 2 of 5 OK created sql view model dbo.source_fact_taxi_trips .................... [[32mOK[0m in 0.07s]
+[0m23:13:03.739286 [debug] [Thread-1 (]: Finished running node model.dbt_project.source_fact_taxi_trips
+[0m23:13:03.740286 [debug] [Thread-1 (]: Began running node model.dbt_project.trip_enriched
+[0m23:13:03.740791 [info ] [Thread-1 (]: 3 of 5 START sql view model dbo.trip_enriched .................................. [RUN]
+[0m23:13:03.741795 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.source_fact_taxi_trips, now model.dbt_project.trip_enriched)
+[0m23:13:03.741795 [debug] [Thread-1 (]: Began compiling node model.dbt_project.trip_enriched
+[0m23:13:03.746309 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.trip_enriched"
+[0m23:13:03.747309 [debug] [Thread-1 (]: Began executing node model.dbt_project.trip_enriched
+[0m23:13:03.754310 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.trip_enriched"
+[0m23:13:03.756403 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:13:03.757404 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."trip_enriched__dbt_tmp" as with trips as (
+    select * from "MiniO_server"."dbo"."fact_taxi_trips"
+),
+weather as (
+    select * from "MiniO_server"."dbo"."dim_weather"
+),
+trip_enriched as (
+    select 
+    t.tpep_pickup_datetime,
+    t.tpep_dropoff_datetime,
+    t.passenger_count,
+    t.trip_distance,
+    t.total_amount,
+    t.tip_amount,
+    t.fare_amount,
+    t.payment_type,
+    datediff(minute, t.tpep_pickup_datetime, t.tpep_dropoff_datetime) as trip_duration_minutes,
+    w.weather_category,
+    w.temperature,
+    w.vent_vitesse,
+    t.tip_amount / nullif(t.fare_amount, 0) * 100 as tip_percentage
+
+
+    from trips t
+    left join weather w 
+        on cast(t.tpep_pickup_datetime as date) = cast(w.timestamp as date)
+        and datepart(hour, t.tpep_pickup_datetime) = datepart(hour, w.timestamp)
+)
+
+select * from trip_enriched;
+    ')
+
+
+[0m23:13:03.758402 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:03.758402 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:13:03.759402 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:13:03.768921 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.774430 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:13:03.775529 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.trip_enriched', 'trip_enriched__dbt_backup'
+[0m23:13:03.778527 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.782530 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:13:03.782530 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.trip_enriched__dbt_tmp', 'trip_enriched'
+[0m23:13:03.786042 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.788043 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: COMMIT
+[0m23:13:03.791043 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."trip_enriched__dbt_backup"
+[0m23:13:03.792041 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:13:03.793042 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:13:03.793042 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'trip_enriched__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:13:03.802562 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.805075 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_enriched"
+[0m23:13:03.806075 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_enriched"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."trip_enriched__dbt_backup";');
+
+[0m23:13:03.809077 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.811075 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: ROLLBACK
+[0m23:13:03.811075 [debug] [Thread-1 (]: On model.dbt_project.trip_enriched: Close
+[0m23:13:03.812072 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f9a4ad0e-1798-48f8-8cbc-f5ac12ed0271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A77916C0>]}
+[0m23:13:03.813074 [info ] [Thread-1 (]: 3 of 5 OK created sql view model dbo.trip_enriched ............................. [[32mOK[0m in 0.07s]
+[0m23:13:03.814074 [debug] [Thread-1 (]: Finished running node model.dbt_project.trip_enriched
+[0m23:13:03.814580 [debug] [Thread-1 (]: Began running node model.dbt_project.high_value_customers
+[0m23:13:03.815590 [info ] [Thread-1 (]: 4 of 5 START sql view model dbo.high_value_customers ........................... [RUN]
+[0m23:13:03.816600 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.trip_enriched, now model.dbt_project.high_value_customers)
+[0m23:13:03.817597 [debug] [Thread-1 (]: Began compiling node model.dbt_project.high_value_customers
+[0m23:13:03.820596 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.high_value_customers"
+[0m23:13:03.822597 [debug] [Thread-1 (]: Began executing node model.dbt_project.high_value_customers
+[0m23:13:03.830113 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.high_value_customers"
+[0m23:13:03.833114 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:13:03.834112 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."high_value_customers__dbt_tmp" as with base as (
+    select * from "MiniO_server"."dbo"."trip_enriched"
+),
+agg as (
+    select 
+        passenger_count as client_id,
+        count(*) as nb_trajets,
+        sum(total_amount) as total_depense,
+        avg(tip_percentage) as avg_tip
+    from base
+    group by passenger_count
+),
+filtre as (
+    select *
+    from agg
+    where nb_trajets > 10
+      and total_depense > 300
+      and avg_tip > 15
+)
+
+select * from filtre;
+    ')
+
+
+[0m23:13:03.834618 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:03.835625 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:13:03.835625 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:13:03.841157 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.846671 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:13:03.847671 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.high_value_customers', 'high_value_customers__dbt_backup'
+[0m23:13:03.850671 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.855188 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:13:03.855188 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.high_value_customers__dbt_tmp', 'high_value_customers'
+[0m23:13:03.858193 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.860196 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: COMMIT
+[0m23:13:03.863195 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."high_value_customers__dbt_backup"
+[0m23:13:03.864697 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:13:03.865704 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:13:03.866704 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'high_value_customers__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:13:03.877739 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.878738 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.high_value_customers"
+[0m23:13:03.879740 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.high_value_customers"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."high_value_customers__dbt_backup";');
+
+[0m23:13:03.881740 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.882740 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: ROLLBACK
+[0m23:13:03.884245 [debug] [Thread-1 (]: On model.dbt_project.high_value_customers: Close
+[0m23:13:03.884245 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f9a4ad0e-1798-48f8-8cbc-f5ac12ed0271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A7CCAF20>]}
+[0m23:13:03.885254 [info ] [Thread-1 (]: 4 of 5 OK created sql view model dbo.high_value_customers ...................... [[32mOK[0m in 0.07s]
+[0m23:13:03.886262 [debug] [Thread-1 (]: Finished running node model.dbt_project.high_value_customers
+[0m23:13:03.887263 [debug] [Thread-1 (]: Began running node model.dbt_project.trip_summary_per_hour
+[0m23:13:03.888263 [info ] [Thread-1 (]: 5 of 5 START sql view model dbo.trip_summary_per_hour .......................... [RUN]
+[0m23:13:03.889262 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.high_value_customers, now model.dbt_project.trip_summary_per_hour)
+[0m23:13:03.889262 [debug] [Thread-1 (]: Began compiling node model.dbt_project.trip_summary_per_hour
+[0m23:13:03.892261 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.trip_summary_per_hour"
+[0m23:13:03.894261 [debug] [Thread-1 (]: Began executing node model.dbt_project.trip_summary_per_hour
+[0m23:13:03.897779 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.trip_summary_per_hour"
+[0m23:13:03.899782 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_summary_per_hour"
+[0m23:13:03.900781 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_summary_per_hour"} */
+USE [MiniO_server];
+    
+    
+
+    
+
+    
+    USE [MiniO_server];
+    EXEC('
+        create view "dbo"."trip_summary_per_hour__dbt_tmp" as with base as (
+    select * from "MiniO_server"."dbo"."trip_enriched"
+),
+agg as (
+    select 
+        datepart(hour, tpep_pickup_datetime) as pickup_hour,
+        weather_category,
+        count(*) as nb_trajets,
+        avg(trip_duration_minutes) as duree_moyenne,
+        avg(tip_percentage) as pourboire_moyen
+    from base
+    group by datepart(hour, tpep_pickup_datetime), weather_category
+)
+
+select * from agg;
+    ')
+
+
+[0m23:13:03.901780 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:03.901780 [debug] [Thread-1 (]: sqlserver adapter: Using connection string: DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;Database=MiniO_server;UID={ohma69};PWD=***;encrypt=Yes;TrustServerCertificate=Yes;APP=dbt-sqlserver/1.8.7
+[0m23:13:03.902780 [debug] [Thread-1 (]: sqlserver adapter: Connected to db: MiniO_server
+[0m23:13:03.909302 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.914807 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_summary_per_hour"
+[0m23:13:03.915820 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_summary_per_hour"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.trip_summary_per_hour', 'trip_summary_per_hour__dbt_backup'
+[0m23:13:03.919829 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.924350 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_summary_per_hour"
+[0m23:13:03.924857 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_summary_per_hour"} */
+USE [MiniO_server];
+      EXEC sp_rename 'dbo.trip_summary_per_hour__dbt_tmp', 'trip_summary_per_hour'
+[0m23:13:03.929865 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.932867 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: COMMIT
+[0m23:13:03.936515 [debug] [Thread-1 (]: Applying DROP to: "MiniO_server"."dbo"."trip_summary_per_hour__dbt_backup"
+[0m23:13:03.938041 [debug] [Thread-1 (]: dbt-sqlserver
+[0m23:13:03.939045 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_summary_per_hour"
+[0m23:13:03.940044 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_summary_per_hour"} */
+
+        USE [MiniO_server];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'MiniO_server'
+        and refs.referenced_schema_name = 'dbo'
+        and refs.referenced_entity_name = 'trip_summary_per_hour__dbt_backup'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-sqlserver');
+
+      
+[0m23:13:03.961976 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.963976 [debug] [Thread-1 (]: Using sqlserver connection "model.dbt_project.trip_summary_per_hour"
+[0m23:13:03.963976 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.trip_summary_per_hour"} */
+
+      
+      
+    
+    USE [MiniO_server];
+    EXEC('DROP view IF EXISTS "dbo"."trip_summary_per_hour__dbt_backup";');
+
+[0m23:13:03.967117 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:13:03.969115 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: ROLLBACK
+[0m23:13:03.969115 [debug] [Thread-1 (]: On model.dbt_project.trip_summary_per_hour: Close
+[0m23:13:03.969115 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f9a4ad0e-1798-48f8-8cbc-f5ac12ed0271', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A1AED7E0>]}
+[0m23:13:03.971628 [info ] [Thread-1 (]: 5 of 5 OK created sql view model dbo.trip_summary_per_hour ..................... [[32mOK[0m in 0.08s]
+[0m23:13:03.972630 [debug] [Thread-1 (]: Finished running node model.dbt_project.trip_summary_per_hour
+[0m23:13:03.974135 [debug] [MainThread]: On master: COMMIT
+[0m23:13:03.975141 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:13:03.975141 [debug] [MainThread]: Connection 'list_MiniO_server' was properly closed.
+[0m23:13:03.976141 [debug] [MainThread]: Connection 'list_MiniO_server_dbo' was properly closed.
+[0m23:13:03.977142 [debug] [MainThread]: Connection 'model.dbt_project.trip_summary_per_hour' was properly closed.
+[0m23:13:03.977142 [info ] [MainThread]: 
+[0m23:13:03.978143 [info ] [MainThread]: Finished running 5 view models in 0 hours 0 minutes and 0.81 seconds (0.81s).
+[0m23:13:03.980144 [debug] [MainThread]: Command end result
+[0m23:13:04.017957 [info ] [MainThread]: 
+[0m23:13:04.018958 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:13:04.018958 [info ] [MainThread]: 
+[0m23:13:04.019958 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m23:13:04.021957 [debug] [MainThread]: Command `dbt run` succeeded at 23:13:04.021957 after 10.14 seconds
+[0m23:13:04.022955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A37F99F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A583F580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A6001390>]}
+[0m23:13:04.022955 [debug] [MainThread]: Flushing usage events
